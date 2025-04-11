@@ -1,0 +1,155 @@
+digraph {
+	rankdir=BT
+	layout=dot
+	subgraph FACTORY_MADE {
+		label=FACTORY_MADE
+		Metal [label=Metal color=red shape=box]
+		Wood [label=Wood color=red shape=box]
+		Plastic [label=Plastic color=red shape=box]
+		Seeds [label=Seeds color=red shape=box]
+		Minerals [label=Minerals color=red shape=box]
+		Chemical [label=Chemical color=red shape=box]
+		"Animal Feed" [label="Animal Feed" color=red shape=box]
+		Glass [label=Glass color=red shape=box]
+		"Sugar and Spices" [label="Sugar and Spices" color=red shape=box]
+		Textiles [label=Textiles color=red shape=box]
+	}
+	subgraph BUILDING_SUPPLIES {
+		label=BUILDING_SUPPLIES
+		Nails [label=Nails color=blue shape=diamond]
+		Planks [label=Planks color=blue shape=diamond]
+		Bricks [label=Bricks color=blue shape=diamond]
+		Cement [label=Cement color=blue shape=diamond]
+		Glue [label=Glue color=blue shape=diamond]
+		Paint [label=Paint color=blue shape=diamond]
+	}
+	subgraph HARDWARE_STORE {
+		label=HARDWARE_STORE
+		hammer [label=hammer color=green shape=diamond]
+		"measuring tape" [label="measuring tape" color=green shape=diamond]
+		Shovel [label=Shovel color=green shape=diamond]
+		"Cooking Utensils" [label="Cooking Utensils" color=green shape=diamond]
+		Ladder [label=Ladder color=green shape=diamond]
+	}
+	subgraph GARDENING_SUPPLIES {
+		label=GARDENING_SUPPLIES
+		Grass [label=Grass color=yellow shape=diamond]
+		"Tree Saplings" [label="Tree Saplings" color=yellow shape=diamond]
+		"Gardening Furniture" [label="Gardening Furniture" color=yellow shape=diamond]
+		"Fire Pit" [label="Fire Pit" color=yellow shape=diamond]
+	}
+	subgraph FARMERS_MARKET {
+		label=FARMERS_MARKET
+		Vegetables [label=Vegetables color=purple shape=diamond]
+		"Flour Bag" [label="Flour Bag" color=purple shape=diamond]
+		"Fruit and Berries" [label="Fruit and Berries" color=purple shape=diamond]
+		Cream [label=Cream color=purple shape=diamond]
+		Corn [label=Corn color=purple shape=diamond]
+		Cheeze [label=Cheeze color=purple shape=diamond]
+		Beef [label=Beef color=purple shape=diamond]
+	}
+	subgraph FURNITURE_STORE {
+		label=FURNITURE_STORE
+		Chairs [label=Chairs color=grey shape=diamond]
+		Tables [label=Tables color=grey shape=diamond]
+		"Home Textiles" [label="Home Textiles" color=grey shape=diamond]
+		Cupboard [label=Cupboard color=grey shape=diamond]
+	}
+	subgraph DONUT_SHOP {
+		label=DONUT_SHOP
+		Donuts [label=Donuts color=grey shape=diamond]
+		"Green Smoothie" [label="Green Smoothie" color=grey shape=diamond]
+		"Bread Roll" [label="Bread Roll" color=grey shape=diamond]
+		"Cherry Cheezecake" [label="Cherry Cheezecake" color=grey shape=diamond]
+		"Frozen Yogurt" [label="Frozen Yogurt" color=grey shape=diamond]
+	}
+	subgraph FASHION_STORE {
+		label=FASHION_STORE
+		Cap [label=Cap color=grey shape=diamond]
+		Shoes [label=Shoes color=grey shape=diamond]
+		Watch [label=Watch color=grey shape=diamond]
+	}
+	subgraph FAST_FOOD_RESTAURANT {
+		label=FAST_FOOD_RESTAURANT
+		"Ice Cream Sandwich" [label="Ice Cream Sandwich" color=grey shape=diamond]
+		Pizza [label=Pizza color=grey shape=diamond]
+	}
+	Metal -> Nails [label=5]
+	Wood -> Planks [label=2]
+	Minerals -> Bricks [label=2]
+	Minerals -> Cement [label=2]
+	Chemical -> Cement [label=1]
+	Plastic -> Glue [label=1]
+	Chemical -> Glue [label=2]
+	Metal -> Paint [label=2]
+	Minerals -> Paint [label=2]
+	Chemical -> Paint [label=2]
+	Metal -> hammer [label=1]
+	Wood -> hammer [label=1]
+	Metal -> "measuring tape" [label=1]
+	Plastic -> "measuring tape" [label=1]
+	Metal -> Shovel [label=1]
+	Wood -> Shovel [label=1]
+	Plastic -> Shovel [label=1]
+	Metal -> "Cooking Utensils" [label=2]
+	Wood -> "Cooking Utensils" [label=2]
+	Plastic -> "Cooking Utensils" [label=2]
+	Metal -> Ladder [label=2]
+	Planks -> Ladder [label=2]
+	Seeds -> Grass [label=1]
+	Shovel -> Grass [label=1]
+	Seeds -> "Tree Saplings" [label=2]
+	Shovel -> "Tree Saplings" [label=1]
+	Planks -> "Gardening Furniture" [label=2]
+	Plastic -> "Gardening Furniture" [label=2]
+	Textiles -> "Gardening Furniture" [label=2]
+	Bricks -> "Fire Pit" [label=2]
+	Cement -> "Fire Pit" [label=2]
+	Shovel -> "Fire Pit" [label=1]
+	Seeds -> Vegetables [label=2]
+	Seeds -> "Flour Bag" [label=2]
+	Textiles -> "Flour Bag" [label=2]
+	Seeds -> "Fruit and Berries" [label=2]
+	"Tree Saplings" -> "Fruit and Berries" [label=1]
+	"Animal Feed" -> Cream [label=1]
+	Minerals -> Corn [label=1]
+	Seeds -> Corn [label=4]
+	"Animal Feed" -> Cheeze [label=2]
+	"Animal Feed" -> Beef [label=3]
+	Wood -> Chairs [label=2]
+	Nails -> Chairs [label=1]
+	hammer -> Chairs [label=1]
+	Planks -> Tables [label=1]
+	Nails -> Tables [label=2]
+	hammer -> Tables [label=1]
+	Textiles -> "Home Textiles" [label=2]
+	"measuring tape" -> "Home Textiles" [label=1]
+	Glass -> Cupboard [label=2]
+	Planks -> Cupboard [label=2]
+	Paint -> Cupboard [label=1]
+	"Flour Bag" -> Donuts [label=1]
+	"Sugar and Spices" -> Donuts [label=1]
+	Vegetables -> "Green Smoothie" [label=1]
+	"Fruit and Berries" -> "Green Smoothie" [label=1]
+	"Flour Bag" -> "Bread Roll" [label=2]
+	Cream -> "Bread Roll" [label=1]
+	"Flour Bag" -> "Cherry Cheezecake" [label=1]
+	"Fruit and Berries" -> "Cherry Cheezecake" [label=1]
+	Cheeze -> "Cherry Cheezecake" [label=1]
+	Cream -> "Frozen Yogurt" [label=1]
+	"Fruit and Berries" -> "Frozen Yogurt" [label=1]
+	"Sugar and Spices" -> "Frozen Yogurt" [label=1]
+	Textiles -> Cap [label=2]
+	"measuring tape" -> Cap [label=1]
+	Textiles -> Shoes [label=2]
+	Plastic -> Shoes [label=1]
+	Glue -> Shoes [label=1]
+	Plastic -> Watch [label=2]
+	Glass -> Watch [label=1]
+	Chemical -> Watch [label=1]
+	"Bread Roll" -> "Ice Cream Sandwich" [label=1]
+	Cream -> "Ice Cream Sandwich" [label=1]
+	"Flour Bag" -> Pizza [label=1]
+	Cheeze -> Pizza [label=1]
+	Beef -> Pizza [label=1]
+}
